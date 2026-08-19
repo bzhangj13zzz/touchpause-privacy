@@ -28,7 +28,8 @@ TouchPause stores these values in private app data:
 - selected app language;
 - the version of the Accessibility disclosure accepted by the user;
 - number of successfully started free sessions;
-- cached Google Play lifetime-access status; and
+- cached Google Play lifetime-access status;
+- whether a valid store-review code enabled review access;
 - short-lived advisory state indicating that a pause is active.
 
 TouchPause disables Android backup and excludes app storage from cloud backup

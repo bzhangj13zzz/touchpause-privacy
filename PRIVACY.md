@@ -1,11 +1,13 @@
 # TouchPause privacy notice
 
-Effective: 2026-10-12 (optional statistics apply from version 1.0.18)
+Effective: 2026-10-12 (regional statistics settings apply from version 1.0.19)
 
 TouchPause pauses touchscreen input locally. It has no advertising, account
 registration or developer-operated server. Version 1.0.18 introduces optional
 usage statistics through Google Analytics for Firebase. Older versions have no
-developer analytics. Statistics are off until you actively agree in the app.
+developer analytics. Version 1.0.18 requires an explicit opt-in everywhere.
+Version 1.0.19 uses regional choices. Statistics are optional, and an existing
+choice to keep them off is never changed by an update.
 
 ## Data collection and network access
 
@@ -22,9 +24,22 @@ billing traffic.
 
 ## Optional usage statistics
 
-You can allow statistics in a separate consent dialog, or leave them off. The
-choice has no effect on free uses, purchases or touch control. Change it anytime
-under **Settings → Privacy → Usage statistics**.
+Before collection starts on a new installation, the app explains the data and
+purpose and lets you select your current country or region. The checkbox is
+initially on for the United States, Australia, New Zealand, Singapore and Hong
+Kong. You can uncheck it or choose **Keep off** before continuing. Elsewhere, or
+without a specified region, it starts off and you must actively check it to allow
+collection. Selecting a country alone, opening the policy, dismissing the notice
+or leaving the app never authorizes collection. Statistics are unavailable for
+declared mainland China and Russia pending cross-border/localization assessment.
+
+Your choice has no effect on free uses, purchases or touch control. Change it
+under **Settings → Privacy → Usage statistics**. Update **Your current country
+or region** there when moving or traveling; a new consent-first region clears
+the preselected checkbox. The declared region stays on device, not in our events.
+We do not look up your location, read your SIM, infer jurisdiction from language,
+or send your IP to a geolocation service. Google independently derives approximate
+region as part of SDK measurement when statistics are enabled.
 
 When enabled, TouchPause sends Google Firebase events describing setup readiness,
 successful pauses, the end of the initial free allowance, attempts after the
@@ -37,14 +52,24 @@ The Google Analytics SDK also processes an app-instance identifier, app and
 device information (such as app version, OS and model), approximate region
 derived from masked IP addresses, app lifecycle information, and Google Play
 purchase events. This is pseudonymous measurement, not completely anonymous
-data. The developer can access statistical reports through Google Analytics.
+data. The developer can access reports and pseudonymous installation event
+timelines through Google Analytics to understand setup and purchase drop-off,
+not to identify people or personalize advertising.
 An app-instance identifier represents an installation, not a verified person.
 
 Advertising-ID collection, advertising storage, advertising user-data consent
 and personalized advertising are disabled. TouchPause does not link Analytics
 to advertising accounts or enable Google signals. Optional account data-sharing
 settings are disabled. Statistics travel to Google over encrypted connections;
-no analytics event is sent to a developer-operated server.
+no analytics event is sent to a developer-operated server. Google acts as a
+processor under accepted [data processing terms](https://business.safety.google/adsprocessorterms/).
+It and its subprocessors may process data abroad, including in the United States;
+its terms describe security, subprocessors and applicable transfer safeguards.
+We remain responsible for the purpose and your choice. In Singapore, notice-based
+collection relies on the PDPA legitimate interests exception for limited product
+improvement, with a documented balancing assessment and immediate free opt-out.
+Silence is not treated as consent. The business-improvement exception is not used
+to justify collecting previously uncollected data.
 
 Turning statistics off stops future collection and clears Analytics data stored
 by the SDK on this device. It does not automatically erase previously collected
@@ -69,7 +94,8 @@ TouchPause stores these values in private app data:
 - cached Google Play lifetime-access status;
 - whether a valid store-review code enabled review access;
 - short-lived advisory state indicating that a pause is active;
-- optional statistics consent and local milestone/day deduplication flags;
+- statistics choice, declared country, notice version, choice time and local
+  milestone/day deduplication flags;
 - Google Analytics SDK data while statistics are enabled.
 
 TouchPause disables Android backup and excludes app storage from cloud backup

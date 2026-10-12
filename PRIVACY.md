@@ -1,9 +1,9 @@
 # TouchPause privacy notice
 
-Effective: 2026-10-12 (version 1.0.20)
+Effective: 2026-10-12 (current Google Play version: 1.0.17)
 
-TouchPause pauses touchscreen input locally. Version 1.0.20 has no usage
-analytics, tracking SDK, advertising, account registration or developer-operated
+TouchPause pauses touchscreen input locally. The current Google Play version,
+1.0.17, has no usage analytics, tracking SDK, advertising, account registration or developer-operated
 server. There is no statistics prompt or statistics setting.
 
 ## Data collection and network access
@@ -19,17 +19,16 @@ purchase token in memory long enough to grant and acknowledge access, but does
 not store it or send it to the developer. Touch or key events are never part of
 billing traffic.
 
-## Earlier statistics builds
+## Experimental statistics builds
 
-Versions 1.0.18 and 1.0.19 contained optional Google Analytics for Firebase.
-Version 1.0.20 removes the SDK completely, including its startup components and
-all usage-event collection. Previous choices cannot enable statistics in this
-version. Update to 1.0.20 to stop collection from an older statistics build.
+Experimental versions 1.0.18 and 1.0.19 contained optional Google Analytics for
+Firebase. They are not the current Google Play release. Version 1.0.17 predates
+these experiments and contains no Analytics SDK or statistics collection.
 
-Removing the SDK does not retroactively delete reports already uploaded to
+Withdrawing experimental releases does not retroactively delete reports uploaded to
 Google. The previous project used two-month user/event retention without renewal
 on activity; aggregate reports may be retained longer. Contact us below about
-previous data or deletion requests. No new analytics data is sent by 1.0.20.
+previous data or deletion requests. No analytics data is sent by 1.0.17.
 
 ## Data stored on the device
 
